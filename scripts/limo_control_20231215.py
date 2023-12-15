@@ -40,16 +40,14 @@ lsddef send_goal(x, y, theta):
     #rospy.spin()
 
 def main():
-    #send_goal(0,0,0)
-    while True:
-        x = input("Input x: ")
-        y = input("Input y: ")
-        theta = input("Input theta: ")
+    send_goal(0,0,0) #第一个message会被吞
+    x = input("Input x: ")
+    y = input("Input y: ")
+    theta = input("Input theta: ")
 
-        for i in range(1):
-            send_goal(x, y, theta)
-            #rospy.sleep(1)
-        #print("set destination")
+    send_goal(x, y, theta)
+        #rospy.sleep(1)
+    #print("set destination")
     rospy.shutdown()
 
 if __name__ == '__main__':
