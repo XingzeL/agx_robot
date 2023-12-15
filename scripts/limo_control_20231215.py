@@ -31,21 +31,22 @@ def send_goal(x, y, theta):
 
     goal.pose.orientation.z = quaternion[2] 
     goal.pose.orientation.w = quaternion[3]
-    print("set pose")
+    #print("set pose")
     pub.publish(goal)
-    print("set goal")
+    #print("set goal")
     #rospy.sleep(1)
     #rospy.spin()
 
 def main():
+    #send_goal(0,0,0)
     while True:
         x = input("Input x: ")
         y = input("Input y: ")
         theta = input("Input theta: ")
 
-        for i in range(2):
+        for i in range(1):
             send_goal(x, y, theta)
-            rospy.sleep(1)
+            #rospy.sleep(1)
         #print("set destination")
     rospy.shutdown()
 
