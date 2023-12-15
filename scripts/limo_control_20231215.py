@@ -5,7 +5,9 @@ from geometry_msgs.msg import PoseStamped
 from tf.transformations import quaternion_from_euler
 from geometry_msgs.msg import Quaternion
 
-def send_goal(x, y, theta):
+Pi = 3.141592653589793
+
+lsddef send_goal(x, y, theta):
     rospy.init_node('send_node_goal', anonymous=True)
    
     #create a publiser pub PoseStamped msgs
@@ -23,7 +25,7 @@ def send_goal(x, y, theta):
     
     roll = 0
     pitch = 0
-    yaw = float(theta)
+    yaw = float(theta) * (Pi / 180)
     quaternion = quaternion_from_euler(roll, pitch, yaw)
 
     goal.pose.orientation.x = quaternion[0]
