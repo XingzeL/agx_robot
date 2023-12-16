@@ -5,7 +5,7 @@
 开启键盘操作：roslaunch limo_bringup limo_teletop_keyboard.launch
 
 保存地图：
-cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/ \n
+cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/ 
 rosrun map_server map_saver –f [mapname]
 
 修改启动地图：
