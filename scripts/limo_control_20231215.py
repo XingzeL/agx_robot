@@ -4,10 +4,11 @@ import rospy
 from geometry_msgs.msg import PoseStamped
 from tf.transformations import quaternion_from_euler
 from geometry_msgs.msg import Quaternion
+import sys
 
 Pi = 3.141592653589793
 
-lsddef send_goal(x, y, theta):
+def send_goal(x, y, theta):
     rospy.init_node('send_node_goal', anonymous=True)
    
     #create a publiser pub PoseStamped msgs
@@ -40,10 +41,18 @@ lsddef send_goal(x, y, theta):
     #rospy.spin()
 
 def main():
+
+    if len(sys.argv) != 4:
+        print("args: x y theta\n");
     send_goal(0,0,0) #第一个message会被吞
-    x = input("Input x: ")
-    y = input("Input y: ")
-    theta = input("Input theta: ")
+
+    x = sys.argv[1];
+    y = sys.argv[2];
+    theta = sys.argv[3];
+
+    # x = input("Input x: ")
+    # y = input("Input y: ")
+    # theta = input("Input theta: ")
 
     send_goal(x, y, theta)
         #rospy.sleep(1)
