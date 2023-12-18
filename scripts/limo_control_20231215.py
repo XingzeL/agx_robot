@@ -40,7 +40,7 @@ def send_goal(x, y, theta):
     #rospy.spin()
 
 def main():
-    #send_goal(0,0,0)
+    send_goal(0,0,0)
     while True:
         x = input("Input x: ")
         y = input("Input y: ")
