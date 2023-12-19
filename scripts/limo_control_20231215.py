@@ -41,7 +41,6 @@ def send_goal(x, y, z, w):
     #rospy.spin()
 
 def main():
-
     if len(sys.argv) != 5:
         print("args: x y z w\n");
     send_goal(0,0,0,0) #第一个message会被吞
