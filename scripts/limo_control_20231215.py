@@ -28,11 +28,11 @@ def send_goal(x, y, theta):
     yaw = float(theta) * (Pi / 180)
     quaternion = quaternion_from_euler(roll, pitch, yaw)
 
-    goal.pose.orientation.x = quaternion[0]
-    goal.pose.orientation.y = quaternion[1]
+    goal.pose.orientation.x = 0
+    goal.pose.orientation.y = 0
 
-    goal.pose.orientation.z = quaternion[2] 
-    goal.pose.orientation.w = quaternion[3]
+    goal.pose.orientation.z =  -0.3545
+    goal.pose.orientation.w = 0.9350
     #print("set pose")
     pub.publish(goal)
     #print("set goal")
@@ -40,15 +40,15 @@ def send_goal(x, y, theta):
     #rospy.spin()
 
 def main():
-    send_goal(0,0,0)
+    #send_goal(0,0,0)
     while True:
         x = input("Input x: ")
         y = input("Input y: ")
         theta = input("Input theta: ")
 
-        for i in range(1):
+        for i in range(2):
             send_goal(x, y, theta)
-            #rospy.sleep(1)
+            rospy.sleep(1)
         #print("set destination")
     rospy.shutdown()
 
