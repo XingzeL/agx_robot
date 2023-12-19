@@ -7,7 +7,7 @@ from geometry_msgs.msg import Quaternion
 
 Pi = 3.141592653589793
 
-lsddef send_goal(x, y, theta):
+def send_goal(x, y, theta):
     rospy.init_node('send_node_goal', anonymous=True)
    
     #create a publiser pub PoseStamped msgs
@@ -40,7 +40,7 @@ lsddef send_goal(x, y, theta):
     #rospy.spin()
 
 def main():
-    #send_goal(0,0,0)
+    send_goal(0,0,0)
     while True:
         x = input("Input x: ")
         y = input("Input y: ")
