@@ -37,7 +37,6 @@ def send_goal(x, y, z, w):
     #print("set pose")
     pub.publish(goal)
     #print("set goal")
-    #rospy.sleep(1)
     #rospy.spin()
 
 def main():
