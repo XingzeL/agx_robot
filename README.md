@@ -13,7 +13,10 @@ roscd limo_bringup/launch
 vi limo_navigation_diff.launch
 改第20行
 
-start the controling node:
+启动设定目的地节点：
 rosrun limo_controller limo_control_20231215.py
 
-start
+修改移动速度：
+cd agilex_ws/src/limo_ros/limo_bringup/param/diff
+vi planner.yaml
+修改第13行的max_vel_x
