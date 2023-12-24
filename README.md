@@ -12,3 +12,8 @@ rosrun map_server map_saver –f [mapname]
 roscd limo_bringup/launch
 vi limo_navigation_diff.launch
 改第20行
+
+start the controling node:
+rosrun limo_controller limo_control_20231215.py
+
+start
