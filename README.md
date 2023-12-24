@@ -20,3 +20,6 @@ rosrun limo_controller limo_control_20231215.py
 cd agilex_ws/src/limo_ros/limo_bringup/param/diff
 vi planner.yaml
 修改第13行的max_vel_x
+
+查看方位
+rostopic echo /amcl_pose
