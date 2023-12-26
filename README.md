@@ -6,7 +6,7 @@
 
 保存地图：
 cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/ 
-rosrun map_server map_saver –f [mapname]
+rosrun map_server map_saver -f [mapname]
 
 修改启动地图：
 roscd limo_bringup/launch
